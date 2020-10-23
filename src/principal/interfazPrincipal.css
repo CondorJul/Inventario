@@ -1,0 +1,31 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+
+#toggleButtonOpcionesMenu{
+	-fx-cursor:hand;
+	-fx-background-color:   #1c99dd;
+}
+
+#toggleButtonOpcionesMenu:hover {
+	-fx-border-color: transparent ;
+	-fx-border-width: 0px 0px 0px 4px;
+	
+	
+}
+
+#toggleButtonOpcionesMenu:selected{
+	-fx-background-color: #1a7eb5;
+	-fx-border-color: transparent;
+	-fx-border-width: 0px 0px 0px 4px;
+}
+
+
+#stackPaneFodoSemiTransparente{
+	-fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+

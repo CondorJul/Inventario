@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="equipos.NuevoEquipo.NuevoEquipoControler">
+   <children>
+      <AnchorPane id="anchorPaneFondo" prefHeight="680.0" prefWidth="780.0" stylesheets="@../../estilocss/EstiloModal.css">
+         <children>
+            <ScrollPane id="AnchorPaneFondo" hbarPolicy="NEVER" prefHeight="580.0" prefWidth="780.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+               <content>
+                  <BorderPane prefHeight="730.0" prefWidth="765.0">
+                     <top>
+                        <BorderPane prefHeight="70.0" BorderPane.alignment="CENTER">
+                           <left>
+                              <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="350.0" spacing="5.0" BorderPane.alignment="CENTER_LEFT">
+                                 <children>
+                                    <FontAwesomeIconView fill="#2600ff" glyphName="LAPTOP" size="35" />
+                                    <Label text="Agregar Nuevo Equipo" textFill="#2600ff">
+                                       <font>
+                                          <Font name="Cambria Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets left="15.0" />
+                                 </BorderPane.margin>
+                              </HBox>
+                           </left>
+                           <bottom>
+                              <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </BorderPane.margin>
+                              </Separator>
+                           </bottom>
+                           <right>
+                              <AnchorPane prefHeight="56.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" layoutY="12.0" prefHeight="31.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="buttonObtenerDatos" mnemonicParsing="false" style="-fx-background-color: WHITE;" textFill="#0ebedd">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#4cae4c" glyphName="CAMERA_RETRO" size="35.0" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets right="15.0" />
+                                       </padding>
+                                    </HBox>
+                                    <Label fx:id="labelObtenerDatos" alignment="CENTER" layoutX="38.0" layoutY="41.0" prefHeight="22.0" prefWidth="139.0" style="-fx-background-color: rgba(0,0,0,0.6); -fx-background-radius: 4;" text="Obtener Datos de Equipo" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="41.0">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </right>
+                        </BorderPane>
+                     </top>
+                     <center>
+                        <BorderPane prefHeight="525.0" prefWidth="735.0" BorderPane.alignment="CENTER">
+                           <top>
+                              <BorderPane prefHeight="161.0" prefWidth="735.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                      <tabs>
+                                        <Tab text="Datos Basicos">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                               <bottom>
+                                                                  <Label text="Tipo de Equipo : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <GridPane.margin>
+                                                                  <Insets />
+                                                               </GridPane.margin>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                               <center>
+                                                                  <ComboBox fx:id="comboBoxTipoEquipo" prefHeight="30.0" prefWidth="245.0" promptText="Seleccione Tipo de Equipo" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                               <right>
+                                                                  <Button fx:id="buttonAgregarTipoEquipo" mnemonicParsing="false" prefHeight="30.0" BorderPane.alignment="CENTER">
+                                                                     <graphic>
+                                                                        <FontAwesomeIconView glyphName="PLUS" size="16" />
+                                                                     </graphic>
+                                                                     <BorderPane.margin>
+                                                                        <Insets left="-4.0" />
+                                                                     </BorderPane.margin>
+                                                                  </Button>
+                                                               </right>
+                                                               <GridPane.margin>
+                                                                  <Insets />
+                                                               </GridPane.margin>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                               <bottom>
+                                                                  <Label text="Marca : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <GridPane.margin>
+                                                                  <Insets />
+                                                               </GridPane.margin>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldMarca" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                               <bottom>
+                                                                  <Label text="Modelo : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldModelo" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                               <bottom>
+                                                                  <Label text="Serie : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldSerie" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                               <bottom>
+                                                                  <Label text="Fabricante : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldFabricante" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                               <bottom>
+                                                                  <Label text="Color :" BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldColor" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </center>
+                                 <BorderPane.margin>
+                                    <Insets top="5.0" />
+                                 </BorderPane.margin>
+                              </BorderPane>
+                           </top>
+                           <center>
+                              <BorderPane prefHeight="247.0" prefWidth="735.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                      <tabs>
+                                        <Tab text="Datos de Hardware y Software">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <GridPane prefWidth="735.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                               <bottom>
+                                                                  <Label text="Nombre del Equipo : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <GridPane.margin>
+                                                                  <Insets />
+                                                               </GridPane.margin>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                               <GridPane.margin>
+                                                                  <Insets />
+                                                               </GridPane.margin>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldNombreEquipo" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                               <bottom>
+                                                                  <Label text="Sistema Operativo : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <GridPane.margin>
+                                                                  <Insets />
+                                                               </GridPane.margin>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <ComboBox fx:id="comboBoxSistemaOperativo" prefHeight="30.0" prefWidth="235.0" promptText="Seleccione Sistema Operativo" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                               <bottom>
+                                                                  <Label text="Procesador : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldProcesador" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                               <bottom>
+                                                                  <Label text="Memoria : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldMemoria" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                               <bottom>
+                                                                  <Label text="Disco : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldDisco" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                               <bottom>
+                                                                  <Label text="Direccion TCP/IPv4 :" BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldDireccionIPV4" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                                               <bottom>
+                                                                  <Label text="Direccion Fisica/MAC :" BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldDirecionFisicaMac" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                               <bottom>
+                                                                  <Label text="Arquitectura :" BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <ComboBox fx:id="comboBoxArquitectura" prefHeight="30.0" prefWidth="235.0" promptText="Seleccione la Aquitectura" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                               <bottom>
+                                                                  <Label text="Tipo de Case :" BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <ComboBox fx:id="comboBoxTipoCase" prefHeight="30.0" prefWidth="235.0" promptText="Seleccione el Tipo de Case" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </center>
+                                 <BorderPane.margin>
+                                    <Insets top="10.0" />
+                                 </BorderPane.margin>
+                              </BorderPane>
+                           </center>
+                           <bottom>
+                              <BorderPane prefHeight="164.0" prefWidth="735.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                      <tabs>
+                                        <Tab text="Otros Datos">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                               <bottom>
+                                                                  <Label text="Pertenece : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <GridPane.margin>
+                                                                  <Insets />
+                                                               </GridPane.margin>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                               <center>
+                                                                  <ComboBox fx:id="comboBoxPertenece" prefHeight="30.0" prefWidth="245.0" promptText="Seleccione Pertenencia" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                               <GridPane.margin>
+                                                                  <Insets />
+                                                               </GridPane.margin>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                               <bottom>
+                                                                  <Label text="Tipo de Conexion : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <GridPane.margin>
+                                                                  <Insets />
+                                                               </GridPane.margin>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <ComboBox fx:id="comboBoxTipoConexion" prefHeight="30.0" prefWidth="245.0" promptText="Seleccione el Tipo de Conexion" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                               <bottom>
+                                                                  <Label text="Estado : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <ComboBox fx:id="comboBoxEstado" prefHeight="30.0" prefWidth="245.0" promptText="Seleccione el Estado" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                               <bottom>
+                                                                  <Label text="Condicion : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <ComboBox fx:id="comboBoxCondicion" prefHeight="30.0" prefWidth="245.0" promptText="Seleccione la Condicion" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                               <bottom>
+                                                                  <Label text="N° de Puertos : " BorderPane.alignment="CENTER_LEFT">
+                                                                     <font>
+                                                                        <Font name="Cambria Bold" size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </bottom>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <center>
+                                                                  <TextField fx:id="textFieldNroPuertos" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                            </BorderPane>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </center>
+                                 <BorderPane.margin>
+                                    <Insets bottom="10.0" />
+                                 </BorderPane.margin>
+                              </BorderPane>
+                           </bottom>
+                           <BorderPane.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </BorderPane.margin>
+                        </BorderPane>
+                     </center>
+                     <bottom>
+                        <BorderPane prefHeight="70.0" prefWidth="765.0" BorderPane.alignment="CENTER">
+                           <top>
+                              <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </BorderPane.margin>
+                              </Separator>
+                           </top>
+                           <center>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="755.0" spacing="20.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <JFXButton fx:id="jfxButtonCerrar" style="-fx-background-color: #f44336;" text="Cerrar" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="30.0" wrappingWidth="27.64285659790039" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="jfxButtonValidar" style="-fx-background-color: #4cae4c;" text="Validar" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="30.0" wrappingWidth="27.428571701049805" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets right="30.0" />
+                                 </BorderPane.margin>
+                              </HBox>
+                           </center>
+                           <left>
+                              <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="503.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ProgressIndicator fx:id="ProgressIndicatorCargando" prefHeight="69.0" prefWidth="40.0" visible="false" />
+                                    <Label fx:id="labelVerificacion" prefHeight="45.0" prefWidth="372.0" />
+                                 </children>
+                              </HBox>
+                           </left>
+                        </BorderPane>
+                     </bottom>
+                  </BorderPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

@@ -1,0 +1,36 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#anchorPaneFondo{
+	-fx-background-color:   white;
+	-fx-background-radius: 10px;
+}
+
+.labelInformacioncorrecto{
+	-fx-font-family: "Arial Narrow";
+	-fx-text-fill: #25b2f8;
+	 -fx-font-size: 16px;
+   	 -fx-font-weight: bold;
+	-fx-background-color: rgba(93, 194, 252 , 0.30);
+	-fx-background-radius: 3 3 3 3;
+	
+}
+
+.labelInformacionincorrecto{
+	-fx-font-family: "Arial Narrow";
+	-fx-font-size: 16px;
+	-fx-text-fill: #FF0000;
+   	-fx-font-weight: bold;
+	-fx-background-color: rgba(250, 43, 43 , 0.30);
+	-fx-background-radius: 3 3 3 3;	
+}
+
+#tipoLetra{
+	-fx-font-family: "Arial Narrow";
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+}
+
+
+
+
+

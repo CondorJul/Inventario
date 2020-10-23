@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="equipos.TipoEquipo.TipoEquipoControler">
+   <children>
+      <AnchorPane id="anchorPaneFondo" prefHeight="178.0" prefWidth="355.0" stylesheets="@../../estilocss/EstiloModal.css">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <BorderPane prefHeight="50.0" prefWidth="355.0" BorderPane.alignment="CENTER">
+                     <bottom>
+                        <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </Separator>
+                     </bottom>
+                     <left>
+                        <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="352.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <FontAwesomeIconView fill="#2600ff" glyphName="PLUS" size="20.0" translateX="5.0" translateY="-4.0" />
+                              <FontAwesomeIconView fill="#2600ff" glyphName="DESKTOP" size="25" />
+                              <Label prefHeight="22.0" prefWidth="278.0" text="Agregar Nuevo Tipo de Equipo" textFill="#2600ff">
+                                 <font>
+                                    <Font name="Cambria Bold" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="8.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </HBox>
+                     </left>
+                  </BorderPane>
+               </top>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <GridPane BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="255.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <BorderPane prefHeight="83.0" prefWidth="151.0">
+                                 <right>
+                                    <Label text="Nombre :" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </right>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <center>
+                                    <TextField fx:id="textFieldNombreTipoEquipo" minHeight="30.0" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets right="10.0" />
+                                       </BorderPane.margin>
+                                    </TextField>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+                     </center></BorderPane>
+               </center>
+               <bottom>
+                  <BorderPane prefHeight="50.0" prefWidth="355.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </Separator>
+                     </top>
+                     <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="71.0" prefWidth="242.0" spacing="8.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton fx:id="jfxButtonCerrar" prefHeight="37.0" prefWidth="93.0" style="-fx-background-color: #f44336;" text="Cerrar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="20.0" wrappingWidth="19.64285659790039" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="jfxButtonValidar" style="-fx-background-color: #4cae4c;" text="Validar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="20.0" wrappingWidth="22.428571701049805" />
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </right>
+                     <bottom>
+                        <Label fx:id="labelVerificacion" alignment="CENTER" prefHeight="17.0" prefWidth="336.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </bottom>
+                  </BorderPane>
+               </bottom>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

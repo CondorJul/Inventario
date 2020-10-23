@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorPaneFondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="325.0" stylesheets="@../../estilocss/EstiloModal.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="usuarios.RestablecerContrasena.RestablecerContrasenaControler">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <BorderPane prefHeight="60.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+               <left>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="325.0" spacing="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <FontAwesomeIconView fill="#2600ff" glyphName="KEY" size="25" />
+                        <Label text="Restablecer Contraseña" textFill="#2600ff">
+                           <font>
+                              <Font name="Cambria Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+               </left>
+               <bottom>
+                  <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </BorderPane.margin>
+                  </Separator>
+               </bottom>
+            </BorderPane>
+         </top>
+         <bottom>
+            <BorderPane prefHeight="60.0" prefWidth="325.0" BorderPane.alignment="CENTER">
+               <center>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="jfxButtonCerrar" style="-fx-background-color: #f44336;" text="Cerrar" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="20.0" wrappingWidth="21.64285659790039" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="jfxButtonValidar" style="-fx-background-color: #4cae4c;" text="Validar" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="20.0" wrappingWidth="20.428571701049805" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <BorderPane.margin>
+                        <Insets top="5.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </center>
+               <top>
+                  <Separator prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </BorderPane.margin>
+                  </Separator>
+               </top>
+               <bottom>
+                  <Label fx:id="labelVerificacion" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="306.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" top="2.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </bottom>
+            </BorderPane>
+         </bottom>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                           <bottom>
+                              <Label id="tipoLetra" text="DNI:" BorderPane.alignment="CENTER_LEFT">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </bottom>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                           <center>
+                              <TextField fx:id="textFieldDni" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                           <bottom>
+                              <Label id="tipoLetra" text="Contraseña nueva:" BorderPane.alignment="CENTER_LEFT">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </bottom>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <center>
+                              <PasswordField fx:id="passwordFieldNuevaPass" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                           </center>
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                           <bottom>
+                              <Label id="tipoLetra" stylesheets="@../../estilocss/EstiloModal.css" text="Repetir contraseña nueva:" BorderPane.alignment="CENTER_LEFT">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </bottom>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                           <center>
+                              <PasswordField fx:id="passwordFieldRepetirNuevaPass" prefHeight="30.0" BorderPane.alignment="CENTER" />
+                           </center>
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                        </BorderPane>
+                     </children>
+                  </GridPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

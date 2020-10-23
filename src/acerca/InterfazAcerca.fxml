@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="anchorPaneFondo" prefHeight="491.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acerca.InterfazAcercaControler">
+   <top>
+      <BorderPane prefHeight="28.0" prefWidth="376.0" style="-fx-background-color: #1c99dd;" BorderPane.alignment="CENTER">
+         <left>
+            <Label text="Acerca de ...." textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Arial Narrow Bold" size="16.0" />
+               </font>
+            </Label>
+         </left>
+         <right>
+            <Label fx:id="labelCerrar" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="16.0" style="-fx-background-color: red;" text="X" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Arial Narrow Bold" size="20.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets right="-10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding></Label>
+         </right>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <VBox alignment="CENTER" prefHeight="384.0" prefWidth="376.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../principal/gorepa2.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Sistema de Inventario GOREPA">
+                     <font>
+                        <Font name="Cambria Bold" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="v1.0.1">
+                     <font>
+                        <Font name="Cambria Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label text="Reconocimientos">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </center>
+   <bottom>
+      <BorderPane prefHeight="67.0" prefWidth="376.0" BorderPane.alignment="CENTER">
+         <center>
+            <VBox alignment="CENTER" prefHeight="83.0" prefWidth="376.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Copyright© 2018 GOREPA">
+                     <font>
+                        <Font name="Cambria Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="RJSA  &amp; JCCCH " underline="true">
+                           <font>
+                              <Font name="Cambria Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #2e2b2b;">
+                           <HBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <Label text="Privacy Policy" underline="true">
+                           <font>
+                              <Font name="Cambria Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </bottom>
+</BorderPane>
